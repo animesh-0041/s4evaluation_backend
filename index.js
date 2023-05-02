@@ -6,7 +6,7 @@ const {postRoute}=require("./routes/posts.route")
 const {auth}=require("./middlewars/auth.middleware")
 const app=express();
 app.use(express.json())
-
+const cors = require('cors')
 app.use("/users",usersRoute)
 app.use(auth)
 app.use("/posts",postRoute)
